@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Footer() {
   return (
@@ -17,10 +18,10 @@ function Footer() {
 
         {/* Links */}
         <div className="d-flex justify-content-center gap-4 mb-3">
-          <a href="#" className="text-decoration-none text-light footer-link">Home</a>
-          <a href="#" className="text-decoration-none text-light footer-link">Predict</a>
-          <a href="#" className="text-decoration-none text-light footer-link">Market</a>
-          <a href="#" className="text-decoration-none text-light footer-link">Contact</a>
+          <Link href="#" className="text-decoration-none text-light footer-link">Home</Link>
+          <Link href="#" className="text-decoration-none text-light footer-link">Predict</Link>
+          <Link href="#" className="text-decoration-none text-light footer-link">Market</Link>
+          <Link href="#" className="text-decoration-none text-light footer-link">Contact</Link>
         </div>
         
         {/* Social */}

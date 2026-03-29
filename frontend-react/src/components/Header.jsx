@@ -1,74 +1,77 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 
 function Navbar() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-black border-bottom border-secondary shadow-sm">
-      <div className="container">
+    <>
+      <nav className="navbar navbar-expand-lg navbar-dark bg-black border-bottom border-secondary shadow-sm">
+        <div className="container">
 
-        {/* Logo */}
-        <a className="navbar-brand fw-bold text-warning" href="#">
-          📈 StockAI
-        </a>
+          {/* Logo */}
 
-        {/* Toggle */}
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navBar"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
+          <Link className="navbar-brand fw-bold text-warning" to="/">
+            📈 StockAI
+          </Link>
 
-        {/* Menu */}
-        <div className="collapse navbar-collapse" id="navBar">
-          <ul className="navbar-nav ms-auto gap-3">
 
-            <li className="nav-item">
-              <a className="nav-link" href="#">Dashboard</a>
-            </li>
+          {/* Toggle */}
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navBar"
+          >
+            <span className="navbar-toggler-icon"></span>
+          </button>
 
-            <li className="nav-item">
-              <a className="nav-link" href="#">Predict</a>
-            </li>
+          {/* Menu */}
+          <div className="collapse navbar-collapse" id="navBar">
+            <ul className="navbar-nav ms-auto gap-3">
 
-            <li className="nav-item">
-              <a className="nav-link" href="#">History</a>
-            </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="#">Dashboard</Link>
+              </li>
 
-            <li className="nav-item">
-              <a className="nav-link" href="#">Market</a>
-            </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="#">Predict</Link>
+              </li>
 
-            {/* Button */}
-            <li className="nav-item">
-              <button className="btn btn-warning fw-semibold">
-                Analyze
-              </button>
-            </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="#">History</Link>
+              </li>
 
-            {/* Account */}
-            <li className="nav-item dropdown">
-              <a 
-                className="nav-link dropdown-toggle"
-                href="#"
-                data-bs-toggle="dropdown"
-              >
-                👤 Account
-              </a>
+              <li className="nav-item">
+                <Link className="nav-link" to="#">Market</Link>
+              </li>
 
-              <ul className="dropdown-menu dropdown-menu-dark dropdown-menu-end">
-                <li><a className="dropdown-item" href="#">Profile</a></li>
-                <li><a className="dropdown-item" href="#">Settings</a></li>
-                <li><hr className="dropdown-divider" /></li>
-                <li><a className="dropdown-item text-success" href="#">Login</a></li>
-                <li><a className="dropdown-item text-danger" href="#">Logout</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div>  
-      </div>
-    </nav>
+              {/* Button */}
+              <li className="nav-item">
+                <button className="btn btn-warning fw-semibold">
+                  Analyze
+                </button>
+              </li>
+
+              {/* Account */}
+              <li className="nav-item dropdown">
+                <Link 
+                  className="nav-link dropdown-toggle"
+                  to="#"
+                  data-bs-toggle="dropdown"
+                >
+                  👤 Account
+                </Link>
+
+                <ul className="dropdown-menu dropdown-menu-dark dropdown-menu-end">
+                  <li><Link className="dropdown-item text-success" to="/login">Login</Link></li>
+                  <li><Link className="dropdown-item text-danger" to="Register">Register</Link></li>
+                </ul>
+              </li>
+            </ul>
+          </div>  
+        </div>
+      </nav>
+    </>
   );
 }
 

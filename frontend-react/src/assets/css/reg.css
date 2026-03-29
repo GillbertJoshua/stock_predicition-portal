@@ -1,0 +1,12 @@
+body {
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+}
+
+.card {
+  border-radius: 12px;
+}
+
+input:focus {
+  box-shadow: none !important;
+  border-color: #ffc107 !important;
+}
